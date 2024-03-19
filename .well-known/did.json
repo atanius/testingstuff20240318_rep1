@@ -1,0 +1,48 @@
+{
+  "id": "did:web:testingstuff20240318.com",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:testingstuff20240318.com"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://testingstuff20240318.com/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/e88b1063-7939-4a0d-8a65-9e4aa716aad6"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#4dba46247503439391726219fd14e597vcSigningKey-7b155",
+      "controller": "did:web:testingstuff20240318.com",
+      "type": "JsonWebKey2020",
+      "publicKeyJwk": {
+        "crv": "P-256",
+        "kty": "EC",
+        "x": "WLo5Y1GAYfvbp5GMiSoGTbOk23BrfeI6DRFCVlnm9uo",
+        "y": "cQjphTuv_F3gAXQlhXFmn44i6vcIkyXmDzRUL8cC8VU"
+      }
+    }
+  ],
+  "authentication": [
+    "#4dba46247503439391726219fd14e597vcSigningKey-7b155"
+  ],
+  "assertionMethod": [
+    "#4dba46247503439391726219fd14e597vcSigningKey-7b155"
+  ]
+}
